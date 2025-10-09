@@ -3,16 +3,16 @@ const gallery = document.querySelector('.gallery');
 const images = [
   {
     preview:
-      '/public/plan-min.jpg',
+      '../public/plan-min.jpg',
     original:
-      '/public/plan@4x-min.jpg',
+      '../public/plan@4x-min.jpg',
     description: 'Planning Project',
   },
   {
     preview:
-      './public/lamp-min.jpg',
+      './goit-js-hw-09/public/lamp-min.jpg',
     original:
-      './public/lamp@4x-min.jpg',
+      './goit-js-hw-09/public/lamp@4x-min.jpg',
     description: 'A Bulb In Hand',
   },
   {
