@@ -1,7 +1,7 @@
 const form = document.querySelector('.feedback-form');
 const STORAGE_KEY = 'feedback-form-state';
 
-//  object with initial values
+// object with initial values
 let formData = {
   email: '',
   message: '',
@@ -15,29 +15,36 @@ if (savedData) {
   form.elements.message.value = formData.message || '';
 }
 
-//   listening to event input on a form
+// listening to event input on a form
 form.addEventListener('input', event => {
-  if (!name) return;
-  formData[event.target.name] = event.target.value.trim();
+  const { name, value } = event.target;
+  if (!name) return; // skip if element without attribute name
+
+  // save only store truncated values
+  formData[name] = value.trim();
+
+  // save actual object in localStorage
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 });
 
-//  handler submit
+// processing submit
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  // update formData before audit
+  // update formData before departure
   formData.email = form.elements.email.value.trim();
   formData.message = form.elements.message.value.trim();
 
+  // check filling both fields
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
     return;
   }
 
-  console.log(formData); // actual data
+  // conclusion actual object in console
+  console.log(formData);
 
-  //  clear storage and object
+  // clear localStorage, object and form
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
   formData = { email: '', message: '' };
