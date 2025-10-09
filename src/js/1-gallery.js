@@ -1,3 +1,10 @@
+// import library
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 const gallery = document.querySelector('.gallery');
 
 const images = [
@@ -85,11 +92,3 @@ const markup = images
 
 // add all markup in list
 gallery.insertAdjacentHTML('beforeend', markup);
-// import library
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-});
