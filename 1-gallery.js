@@ -1,12 +1,12 @@
-import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                      */import{S as p}from"./assets/vendor-CgTBfC_f.js";const n=document.querySelector(".gallery"),r=[{preview:"/goit-js-hw-09/plan-min.jpg",original:"/goit-js-hw-09/plan@4x-min.jpg",description:"Planning Project"},{preview:"/goit-js-hw-09/lamp-min.jpg",original:"/goit-js-hw-09/lamp@4x-min.jpg",description:"A Bulb In Hand"},{preview:"./public/dev-motto-min.jpg",original:"./public/dev-motto@4x-min.jpg",description:"A Motto On The Phone Screen"},{preview:"./public/mettroom-min.jpg",original:"./public/mettroom@4x-min.jpg",description:"Meeting Room"},{preview:"./public/chillroom-min.jpg",original:"./public/chillroom@4x-min.jpg",description:"Leisure Room"},{preview:"./public/office-min.jpg",original:"./public/office@4x-min.jpg",description:"IT Company Office"},{preview:"./public/workspace-min.jpg",original:"./public/workspace@4x-min.jpg",description:"Workspace"},{preview:"./public/work-min.jpg",original:"./public/work@4x-min.jpg",description:"Girl Working At The Computer"},{preview:"./public/meet-min.jpg",original:"./public/meet@4x-min.jpg",description:"Working Meeting"}],l=r.map(({preview:e,original:i,description:o})=>`
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                      */import{S as n}from"./assets/vendor-CgTBfC_f.js";const t=document.querySelector(".gallery"),r=[{preview:"/goit-js-hw-09/plan-min.jpg",original:"/goit-js-hw-09/plan@4x-min.jpg",description:"Planning Project"},{preview:"/goit-js-hw-09/lamp-min.jpg",original:"/goit-js-hw-09/lamp@4x-min.jpg",description:"A Bulb In Hand"},{preview:"/goit-js-hw-09/dev-motto-min.jpg",original:"/goit-js-hw-09/dev-motto@4x-min.jpg",description:"A Motto On The Phone Screen"},{preview:"/goit-js-hw-09/mettroom-min.jpg",original:"/goit-js-hw-09/mettroom@4x-min.jpg",description:"Meeting Room"},{preview:"/goit-js-hw-09/chillroom-min.jpg",original:"/goit-js-hw-09/chillroom@4x-min.jpg",description:"Leisure Room"},{preview:"/goit-js-hw-09/office-min.jpg",original:"/goit-js-hw-09/office@4x-min.jpg",description:"IT Company Office"},{preview:"/goit-js-hw-09/workspace-min.jpg",original:"/goit-js-hw-09/workspace@4x-min.jpg",description:"Workspace"},{preview:"/goit-js-hw-09/work-min.jpg",original:"/goit-js-hw-09/work@4x-min.jpg",description:"Girl Working At The Computer"},{preview:"/goit-js-hw-09/meet-min.jpg",original:"/goit-js-hw-09/meet@4x-min.jpg",description:"Working Meeting"}],g=r.map(({preview:o,original:i,description:e})=>`
 <li class="gallery-item">
   <a class="gallery-link" href="${i}">
     <img
       class="gallery-image"
-      src="${e}"
+      src="${o}"
       data-source="${i}"
-      alt="${o}"
+      alt="${e}"
     />
   </a>
-</li>`).join("");n.insertAdjacentHTML("beforeend",l);new p(".gallery a",{captionsData:"alt",captionDelay:250});
+</li>`).join("");t.insertAdjacentHTML("beforeend",g);new n(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=1-gallery.js.map
