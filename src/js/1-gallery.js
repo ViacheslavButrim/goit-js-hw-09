@@ -3,65 +3,65 @@ const gallery = document.querySelector('.gallery');
 const images = [
   {
     preview:
-      './img/plan-min.jpg',
+      './public/plan-min.jpg',
     original:
-      './img/plan@4x-min.jpg',
+      './public/plan@4x-min.jpg',
     description: 'Planning Project',
   },
   {
     preview:
-      './img/lamp-min.jpg',
+      './public/lamp-min.jpg',
     original:
-      './img/lamp@4x-min.jpg',
+      './public/lamp@4x-min.jpg',
     description: 'A Bulb In Hand',
   },
   {
     preview:
-      './img/dev-motto-min.jpg',
+      './public/dev-motto-min.jpg',
     original:
-      './img/dev-motto@4x-min.jpg',
+      './public/dev-motto@4x-min.jpg',
     description: 'A Motto On The Phone Screen',
   },
   {
     preview:
-      './img/mettroom-min.jpg',
+      './public/mettroom-min.jpg',
     original:
-      './img/mettroom@4x-min.jpg',
+      './public/mettroom@4x-min.jpg',
     description: 'Meeting Room',
   },
   {
     preview:
-      './img/chillroom-min.jpg',
+      './public/chillroom-min.jpg',
     original:
-      './img/chillroom@4x-min.jpg',
+      './public/chillroom@4x-min.jpg',
     description: 'Leisure Room',
   },
   {
     preview:
-      './img/office-min.jpg',
+      './public/office-min.jpg',
     original:
-      './img/office@4x-min.jpg',
+      './public/office@4x-min.jpg',
     description: 'IT Company Office',
   },
   {
     preview:
-      './img/workspace-min.jpg',
+      './public/workspace-min.jpg',
     original:
-      './img/workspace@4x-min.jpg',
+      './public/workspace@4x-min.jpg',
     description: 'Workspace',
   },
   {
     preview:
-      './img/work-min.jpg',
+      './public/work-min.jpg',
     original:
-      './img/work@4x-min.jpg',
+      './public/work@4x-min.jpg',
     description: 'Girl Working At The Computer',
   },
   {
     preview:
-      './img/meet-min.jpg',
+      './public/meet-min.jpg',
     original:
-      './img/meet@4x-min.jpg',
+      './public/meet@4x-min.jpg',
     description: 'Working Meeting',
   },
 ];
