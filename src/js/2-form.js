@@ -1,53 +1,54 @@
+import throttle from 'lodash.throttle';
+
+const form = document.querySelector('.feedback-form');
 const STORAGE_KEY = 'feedback-form-state';
 
-// Отримуємо посилання на форму
-const form = document.querySelector('.feedback-form');
-
-// 1️⃣ Початковий об’єкт
 let formData = {
   email: '',
   message: '',
 };
 
-// 2️⃣ Відновлення даних при завантаженні сторінки
+// 🟢 1. Завантажуємо збережені дані при старті
 const savedData = localStorage.getItem(STORAGE_KEY);
 if (savedData) {
-  formData = JSON.parse(savedData);
-  form.elements.email.value = formData.email || '';
-  form.elements.message.value = formData.message || '';
+  try {
+    formData = JSON.parse(savedData);
+    form.elements.email.value = formData.email || '';
+    form.elements.message.value = formData.message || '';
+  } catch (error) {
+    console.error('Invalid JSON in localStorage:', error);
+  }
 }
 
-// 3️⃣ Відстеження подій input на формі (делегування)
-form.addEventListener('input', event => {
-  const { name, value } = event.target;
-  if (!name) return; // ігноруємо елементи без name
+// 🟢 2. Слухаємо input і зберігаємо дані в сховище (throttled)
+form.addEventListener(
+  'input',
+  throttle(e => {
+    formData[e.target.name] = e.target.value.trim();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  }, 500)
+);
 
-  // Оновлюємо тільки потрібне поле
-  formData[name] = value.trim();
+// 🟢 3. Сабміт форми
+form.addEventListener('submit', e => {
+  e.preventDefault();
 
-  // Зберігаємо в localStorage
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-});
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
-// 4️⃣ Обробка події submit
-form.addEventListener('submit', event => {
-  event.preventDefault();
-
-  // Оновлюємо об’єкт із поточними значеннями
-  formData.email = form.elements.email.value.trim();
-  formData.message = form.elements.message.value.trim();
-
-  // Перевірка заповнення полів
-  if (formData.email === '' || formData.message === '') {
+  // 🟥 Перевірка заповнення
+  if (email === '' || message === '') {
     alert('Fill please all fields');
     return;
   }
 
-  // Виводимо актуальний об’єкт у консоль
-  console.log(formData);
+  // 🟢 Логуємо актуальні дані
+  console.log({ email, message });
 
-  // Очищаємо localStorage, форму і об’єкт
+  // 🟢 Очищаємо форму та сховище
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
+
+  // 🟢 Скидаємо локальний об’єкт
   formData = { email: '', message: '' };
 });
