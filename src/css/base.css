@@ -30,3 +30,18 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+input {
+  width: 348px;
+  min-height: 40px;
+  padding: 0;
+  padding-left: 12px;
+}
+input:hover {
+  border: solid 2px;
+  color: #000;
+   transition: border 0.3s;
+}
+input:focus {
+  border: 2px solid #ccc;
+  outline: none;
+}

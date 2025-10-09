@@ -13,6 +13,142 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./vite-promo.css');
-@import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+ .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style-type: none;
+    padding: 40px 0;
+}
+.gallery-image {
+  display: block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.simple-lightbox {
+  background-color:rgba(46, 47, 66, 0.8);                         
+}
+.simple-lightbox .sl-counter{
+  font-family: "Montserrat", sans-serif !important;
+font-weight: 400 !important;
+font-size: 16px !important;
+line-height: 1.5 !important;
+letter-spacing: 0.04em !important;
+color: #fff !important;
+}
+.simple-lightbox .sl-caption {
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+}
+.container {
+  padding-bottom: 40px;
+}
+.simple-lightbox .sl-prev {
+  width: 24px;
+  height: 24px;
+  background-image: url('/img/ileft.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px; 
+}
+.simple-lightbox .sl-next {
+  width: 24px;
+  height: 24px;
+  background-image: url('/img/iright.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+}
+.simple-lightbox .sl-close {
+  background-image: url('/img/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+}
+
+.sl-wrapper .sl-navigation button.sl-next,  .sl-wrapper .sl-navigation button.sl-prev {
+  width: 24px;
+  height: 24px;
+}
+   
+  .sl-wrapper .sl-close {
+  padding: 0;
+  margin: 0;
+  width: 14px !important;
+  height: 14px !important;
+  transform: translate(-20px, 20px)!important;
+}
+/* form styles*/
+.form-container {
+  margin: 0 auto;
+  max-width: 408px;
+  background: #fff;
+}
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+.mail-lab {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.mass-lab {
+  text-align: start;
+}
+.message-lab {
+  display: flex;
+  flex-direction: column;
+  width: 348px;
+  min-height: 80px;
+  padding: 12px 0 0 12px;
+}
+.mail-text {
+  text-align: start;
+  padding-bottom: 8px;
+  
+}
+.message-text {
+  display: block;
+  text-align: start;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  
+}
+.btn-container {
+  align-self: flex-start;
+ padding: 16px 0 0 24px;
+ 
+}
+.btn {
+  display: flex;
+  width: 95px;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+border-radius: 8px;
+padding: 8px 16px;
+background: #4e75ff;
+}
+.btn:hover, .btn:focus {
+  background: #6c8cff;
+}
