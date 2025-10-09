@@ -3,9 +3,9 @@ const gallery = document.querySelector('.gallery');
 const images = [
   {
     preview:
-      './public/plan-min.jpg',
+      '/goit-js-hw-09/public/plan-min.jpg',
     original:
-      './public/plan@4x-min.jpg',
+      '/goit-js-hw-09/public/plan@4x-min.jpg',
     description: 'Planning Project',
   },
   {
