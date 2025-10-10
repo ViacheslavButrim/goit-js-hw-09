@@ -45,7 +45,7 @@ form.addEventListener('submit', event => {
   console.log(formData);
 
   // clear localStorage, object and form
-  //localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEY);
   form.reset();
   formData = { email: '', message: '' };
 });
